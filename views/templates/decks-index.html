@@ -1,0 +1,62 @@
+  <div >
+    <div class="view">
+
+     <h1 class="text-center lobster">Welcome {{currentUser.get('username')}}!</h1> 
+
+      <div class="showdecks col-xs-12 col-sm-6 col-lg-8 text-center">
+        <section class="container-fluid" >
+          <h3 class="lobster ">My Decks</h3>
+          <div class="row">
+            <div class='col-xs-12 col-lg-6 ' ng-repeat="deck in decks" >
+            
+              <div class="deck"  ui-sref="cards({id: deck.id})" ng-style="{'background':deck.attributes.colorback }">
+
+                <div class='pull-right' ng-really-message="Are you sure you want to delete this deck?"  ng-really-click=" deleteDeck($event, deck.id)"  > 
+                  <a href="#" ><i class='glyphicon glyphicon-remove'></i></a>
+                </div><!-- delete button on deck -->
+
+                <div class="decktitle"><h4>{{deck.attributes.name}}  </h4></div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+      <hr>
+      </div>
+      <div class=" col-xs-12 col-sm-6 col-lg-4 makedeck">
+        <h3 class="text-center lobster"> Why dont you make a new Deck?</h3>
+        <form  class="col-xs-12  text-center "name="newDeckForm" ng-submit="createDeck(Deck)">
+
+          <div class="row lobster">
+            <div class="form-group">
+              <label for="new-Deck-prompt">New Deck name</label><br>
+              <input class="form-control"type="textarea" id="new-Deck-name" ng-model="Deck.name" required/>
+            </div>
+            <div class="form-group">
+              <label for="new-Deck-answer">New Deck Description</label><br>
+              <input class="form-control" type="textarea" id="new-Deck-answer"ng-model="Deck.description" />
+            </div>
+           <!--  <div class="form-group">
+              <label for="new-deck-color-front">Card color front (default navy)</label><br>
+              <input class="form-control"  ng-model="Deck.colorfront" type="color" id="new-deck-color-front" ng-style="{'background':Deck.colorfront}"/>
+            </div> -->
+            <div class="form-group">
+              <label for="new-deck-color-back"> Deck color (optional) default red/navy </label><br>
+              <input  class="form-control" ng-model="Deck.colorback" type="color" id="new-deck-color-back" ng-style="{'background':Deck.colorback, 'padding' : '5px'}"/>
+            </div>
+          </div>
+          <div class="row lobster">  
+            <div class="">
+              <button type="submit" class='btn btn-default save menu-item'>Save</button>
+            </div>
+            your pending deck is {{Deck}}
+          </div>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- ng-show="scenario == 'make cards'" ng-hide="scenario == 'make decks'" ui-sref="cards"-->
+
+
