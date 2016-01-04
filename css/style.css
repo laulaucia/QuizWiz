@@ -1,0 +1,243 @@
+/*PUT YOUR STYLES HERE*/
+
+.qzlogo{
+  width: 50%;
+  max-width: 200px;
+  position: center;
+  margin-top: 10px;
+  display: inline-block;
+  animation-name: bounceInDown;
+  animation-duration: 2s;
+}
+
+.body{
+  font-family: 'Cabin', sans-serif;
+}
+
+/*  Card & Deck Styles
+=====================================*/
+
+.card {
+  background: #202060;
+  border-color: #202060;
+  color: white;
+  padding: 1rem;
+  min-height: 16rem;
+  position: relative;
+  margin-bottom: 10px;
+  border-radius: 30px;
+  animation-name: flipInX;
+  animation-duration: 1s;
+}
+.card h4{
+  padding-top: 10%;
+}
+
+.card h6 {
+  position: absolute;
+  font-size: 1rem;
+  margin-top: 1.618rem;
+  opacity: 0.5;
+  bottom: 0.618rem;
+  left: 1rem;
+
+}
+.card h6:after {
+  font-size: 80%;
+  margin-left: 1px;
+}
+
+.card.answer{
+  background-color: #b30000;
+  animation-name: flipInY;
+  animation-duration: 1s;
+}
+.deck {
+  background: #202060;
+  border-color: black;
+  color: rgba(255,255,255, .7);
+  padding: 1rem;
+  min-height: 8rem;
+  position: relative;
+  margin-bottom: 5px;
+  border-radius: 15px;
+  animation-name: flipInX;
+  animation-duration: 1s;
+  overflow: hidden;
+  opacity: .8;
+}
+.deck h4{
+  
+  top: 20px;
+  font-size: 1.7em
+}
+
+.deck .decktitle::before{
+  content: '\f217';
+  font-family: Ionicons;
+  font-weight: bold;
+  font-size: 30;
+  position: absolute;
+  left: -30%;
+
+
+}
+.deck .decktitle{
+  position: relative;
+  height: 50px;
+
+}
+.deck:hover{
+  /*background: black !important;*/
+  color: white;
+  transition: .2s;
+  opacity: 1;
+
+  
+}
+
+.deck:active{
+  background: black;
+}
+.deck .decktitle:hover::before{
+  left: 10%;
+  transition: .45s;
+
+}
+
+.well{
+  background: white;
+  border-style: none;
+}
+
+
+
+/*  Form Styles
+=====================================*/
+.makedeck{
+  animation-name: fadeInRight;
+  animation-duration: 1s;
+}
+
+form input{
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    outline: none;
+    font-family: 'Cabin', sans-serif;
+}
+
+form input:active{
+  border-radius: 20px;
+  outline: none;
+}
+
+.btn .save{
+  margin-top: 20px;
+  border: 10px pink;
+}
+
+/*.wrapper{
+  min-width: 500px;
+  padding: 0;
+}*/
+
+.navigation{
+  position: relative;
+  z-index: 1;
+
+
+}
+
+.menu-item{ 
+  padding: 12px 20px;
+  background: #202060;
+  color: white;
+  border-radius: 20px;
+  font-family: 'Lobster', cursive;
+  width: 9em;
+  margin: 0 5px;
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  outline: 0;
+}
+
+.menu-item:hover{
+  color: white;
+  background: #b30000;
+}
+
+.menu-item:active{
+  color: white;
+  background: black;
+}
+
+.menu-item:visited,
+.menu-item:link{
+  color: white;
+}
+
+.lobster{
+  font-family: 'Lobster', cursive;
+}
+.content{
+  position: relative;
+}
+
+.form{
+  padding: 20px;
+  margin:20px;
+}
+.glyphicon-remove{
+  color: white;
+}
+
+/*  Float Clearfix
+=====================================*/
+
+.group:after{
+  content: " ";
+  display:  table;
+  clear: both;
+}
+
+
+/*  Media Queries
+=====================================*/
+
+@media (min-width: 768px){
+  .qzlogo{
+    max-width: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+  }
+  .tagline{
+    font-size: 2em;
+    position: absolute;
+    left: 240px;
+    top: 50px;
+
+  }
+  .navigation{
+    position: absolute;
+    height: 100px;
+    width: 100%;
+
+  }
+  .navbuttons{
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+  }
+  .content{ padding-top: 170px;}
+}
+.cardcontainer{
+  padding-top: 50px;
+}
+
+.cardform, .makedeck{
+  border-left: 1px dashed lightgrey;
+}
