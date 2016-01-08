@@ -241,3 +241,7 @@ form input:active{
 .cardform, .makedeck{
   border-left: 1px dashed lightgrey;
 }
+
+.footer{
+  position: fixed-bottom;
+}
