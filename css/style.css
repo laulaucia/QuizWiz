@@ -242,3 +242,6 @@ form input:active{
   border-left: 1px dashed lightgrey;
 }
 
+.lblink{
+  color: black;
+}
